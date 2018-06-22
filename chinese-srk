@@ -1,8 +1,4 @@
-#所有汉化均由曦颜XY独立完成
-#修订版本：Beta1.2.0_17.11.26
-#如有汉化建议请联系本人微博：曦顏XY
-#原作者：SuperR
-#XDA链接：https://forum.xda-developers.com/chef-central/android/kitchen-superrs-kitchen-t3202296
+# Translation by xiyan
 
 # Main Menu
 export t_title_main="主菜单"
@@ -35,6 +31,7 @@ export t_menu_build_menu="ROM打包菜单"
 export t_startup_project="当前项目:"
 export t_startup_version="安卓版本:"
 export t_startup_no_root="厨房不应以ROOT运行"
+export t_startup_python="您必须安装python3.5+. 您现在的版本: "
 export t_startup_shell_error="${redb}${yellowt}${bold}SHELL ERROR:$normal\nBash is required to use this kitchen.\nThe kitchen is currently running in $SHELL."
 export t_startup_dep_check="检查依赖 ..."
 export t_startup_dep_missing="${redb}${yellowt}${bold}缺少依赖文件:$normal\n下面的依赖缺失:$normal"
@@ -175,6 +172,10 @@ export t_menu_initd="添加/删除 init.d 支持"
 export t_menu_insecure="Insecure/Secure boot.img"
 export t_menu_dmverity="删除 dm-verity"
 export t_menu_forcee="添加/删除 forceencrypt"
+export t_menu_deopatch="Patch sepolicy--安卓Oreo deodex操作"
+export t_menu_deopatch_add="sepolicy 已经patch了--Oreo deodex操作
+export t_menu_deopatch_none="sepolicy没看到啊"
+export t_menu_deopatch_fail="Patch失败, 可能sepolicy 已经patch了."
 export t_menu_unpack="解包"
 export t_menu_boot_flashable="构建此img单刷包:"
 export t_menu_switch_boot="在之间切换boot/recovery"
@@ -329,15 +330,13 @@ export t_title_cho_smali="选择smali:"
 export t_title_cho_baksmali="选择baksmali:"
 export t_title_cho_oat2dex="选择oat2dex:"
 export t_deodex_need_64_bit="您需要64位Linux才能使用此功能"
-export t_deodex_need_oatdump="你需要oddump继续."
-export t_deodex_oatdump_dl_m="(大约下载105MB)"
 export t_deodex_dl_install="正在下载/安装 ..."
 export t_deodex_no_api="无法检测Android版本."
 export t_deodex_config_arch="配置设备的arch.\n\n提示:\n检查framework文件夹, 里面可以看到另一个文件夹. \n文件夹的名字可能是以下之一\n(ex. arm, arm64, x86).\n\n如果这里有问题, 检查以下问题:\n\n1. 确保输入的arch变量是正确的.\n2. 确保ROM没有deodexed.\n\n输入设备的arch并且按回车继续."
 export t_deodex_extract_txt="提取odex文件 ..."
 export t_deodex_extract="提取中... "
 export t_deodex_move="移动额外的应用程序 ..."
-export t_deodex_deop="Deoptimizing boot.oat ..."
+export t_deodex_deop="逆优化(类似合并ODEX性质) boot.oat ..."
 export t_deodex_start_app="开始deodexing /system/app ..."
 export t_deodex_start_priv="开始deodexing /system/priv-app ..."
 export t_deodex_start_frame="开始deodexing /system/framework ..."
@@ -384,6 +383,7 @@ export t_extract_zip_fail="这个zip不包含厨房可以\n提取的任何东西
 export t_extract_zip="提取zip ..."
 export t_extract_dat="正在提取 system.new.dat, system.transfer.list, 和 boot.img ..."
 export t_extract_convert_sys="转换到 "
+export t_extract_convert_br="解压 dat.br ..."
 export t_extract_img_from_zip="正在从zip包中提取镜像 ..."
 export t_extract_tar_boot="正在提取 system.ext4.tar.a 和 boot.img ..."
 export t_extract_img="正在提取 images ..."
@@ -391,6 +391,7 @@ export t_extract_fail="提取过程中出现错误."
 export t_extract_tar_md5="提取tar.md5文件 ..."
 export t_extract_chunk="提取sparsechunks和boot.img ..."
 export t_extract_convert_chunk="转换sparse chunks为system.img ..."
+export t_extract_fix_img="修复system.img ..."
 export t_extract_general="提取到"
 export t_extract_check_firm="正在检测固件包 ..."
 export t_extract_tgz_fail="该tgz文件似乎不是Nexus官方固件."
@@ -451,6 +452,7 @@ export t_byname_manual_info="您将需要手动在updater-script中输入分区�
 
 # Signature
 export t_sig_info="${bluet}这个问题的答案将显示当zip创建时\n刷入的zip和将被转换为zip的名称，$normal\n\n你的zip的名称是?"
+export t_sig_error="不要在zip名中使用"
 export t_donate_sig_cust="${bluet}这一个将显示在下面的zip名称，\n当刷入时 SuperR's Kitchen创建声明的标准版本.$normal\n\n你的签名是什么?"
 
 # Zip devices
@@ -493,6 +495,7 @@ export t_update_fail="更新时出现问题.如果您修改了除项目之外的
 export t_update_q="你想现在更新吗?  y/n  "
 export t_update_auto_q="你想在厨房启动时检查更新?  y/n  "
 export t_restart="厨房需要重启一下哟～"
+export t_tools_dl_failed="工具下载失败:"
 
 # New Project
 export t_new_q="请输入新项目名称(${yellowt}空格会自动替换为_XXX$normal):"
